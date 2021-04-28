@@ -1,17 +1,24 @@
 fun main() {
 
-        var  numerosaleatorios  = 0
+    var numerosAleatorio = 0
+    val listadelosNumeros = mutableListOf<Int>()
+    var media : Double = 0.0
+    val numerosMayoresoIguales: MutableList<Int> = mutableListOf()
 
+    repeat (100){
+        numerosAleatorio = (0..100).random()
+        listadelosNumeros.add(numerosAleatorio)
+        media += numerosAleatorio
+        media /= listadelosNumeros.size
+    }
+    for (i in listadelosNumeros){
+        if (i >= media) numerosMayoresoIguales.add(i)
 
-        val listaNumerosAleatorios = mutableListOf < Int > ()
+    }
 
-        for(i in 0..numerosaleatorios){
-            listaNumerosAleatorios.add((0..100).random())
-            println(i)
-        }
+    println("La media es: $media \n" )
 
-
-
+    println("Numeros mayores o iguales que la media : \n $numerosMayoresoIguales \n")
 
 
     }
