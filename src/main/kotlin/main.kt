@@ -10,13 +10,16 @@ fun main() {
         numerosAleatorio = (0..100).random()
         listadelosNumeros.add(numerosAleatorio)
         media += numerosAleatorio
-        listadelosNumeros.add(numerosAleatorio)
     }
     media /= listadelosNumeros.size
-    for (i in listadelosNumeros){
-        if (i >= media) numerosMayoresoIguales.add(i)
 
+    for (i in listadelosNumeros){
+
+        // if con 2 condiciones
+        if (i >=media && i%2==0) numerosMayoresoIguales.add(i)
+        if (i >=media) if (i%2==0) numerosMayoresoIguales.add(i)
     }
+
 
     println("La media es: $media \n" )
 
